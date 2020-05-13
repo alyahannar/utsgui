@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .header{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top:0;
+            left: 0;
+            padding: 5px;
+        }
+        .header h1{
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: antiquewhite;
+        }
+        .kiri{
+            width: 70%;
+            height: 300px;
+            float: left;
+            background-color: bisque;
+            margin-top: 100px;
+            margin-left: 5px;
+        }
+        .kanan{
+            width: 29.25%;
+            height: 500px;
+            float: right;
+            background-color:rgba(252, 14, 14, 0.644);
+            margin-top: 100px;
+            margin-right: 5px;
+        }
+        .kotak{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 5px 5px 2px 0px darkred;
+            background-size: contain;
+        }
+        .kotak2{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 5px 5px 2px 0px darkred;
+        }
+        .bawah{
+            margin-top: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Vokasi pedia</h1>
+    </div>
+    <div class="kiri">
+        <h1>BUKU</h1>
+        <div>
+        <div class="kotak" style="background-image: url(buku1.jpg)">
+            <div style="float: right; margin-top: 210px;">
+                <button onclick="beli()">Beli</button>
+                </div>
+            <div class="bawah" id="buku1" >
+                Harga: <br> 99.000
+            </div>
+        </div>
+        <div class="kotak" style="background-image: url(buku2.jpg)">
+            <div style="float: right; margin-top: 210px;">
+                <button onclick="beli2()">Beli</button>
+                </div>
+            <div class="bawah" id="buku2">
+                Harga: <br> 87.000
+            </div>
+        </div>
+        <div class="kotak" style="background-image: url(buku3.jpg)">
+            <div style="float: right; margin-top: 210px;">
+                <button onclick="beli3()">Beli</button>
+                </div>
+            <div class="bawah" id="buku3">
+                Harga: <br> 65.000
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <p>Keranjang Belanja</p>
+        </div>
+    </div>
+</body>
+</html>

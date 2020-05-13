@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Kotak</title>
+    <style>
+        .kotak1{
+        width: 440px;
+        height: 200px;
+        background-size: cover;
+
+        }
+        .kotak2{
+        width: 440px;
+        height: 100px;
+        border: 1px solid black; 
+        box-sizing: border-box;
+        }
+        .kotak3{
+        width: 100px;
+        height: 80px;
+        float : left;
+        margin: 5px 2.5px 5px 2.5px; 
+        border: 2px solid blue;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("3.jpg");
+        }
+        .kotak4{
+        width: 100px;
+        height: 80px;
+        float : left;
+        margin: 5px 2.5px 5px 2.5px; 
+        border: 2px solid black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("4.jpg");
+        }
+        .kotak5{
+        width: 100px;
+        height: 80px;
+        float : left;
+        margin: 5px 2.5px 5px 2.5px; 
+        border: 2px solid yellow;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("5.jpg");
+        }
+        .kotak6{
+        width: 100px;
+        height: 80px;
+        float : left;
+        margin: 5px 2.5px 5px 2.5px; 
+        border: 2px solid green;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("6.jpg");
+        }
+    </style>
+</head>
+<body>
+    <div class="kotak1" id="hasil"></div>
+    <div class="kotak2">
+        <div class="kotak3" type="button" onclick=biru() id="btn"></div>
+        <div class="kotak4" type="button" onclick=black() id="btn"></div>
+        <div class="kotak5" type="button" onclick=yellow() id="btn"></div>
+        <div class="kotak6" type="button" onclick=green() id="btn"></div>
+    </div>
+
+    <script>
+        function biru(){
+            document.getElementById('hasil').style.backgroundImage='url("3.jpg")';
+        }
+        function black(){
+            document.getElementById('hasil').style.backgroundImage='url("4.jpg")';
+        }
+        function yellow(){
+            document.getElementById('hasil').style.backgroundImage='url("5.jpg")';
+        }
+        function green(){
+            document.getElementById('hasil').style.backgroundImage='url("6.jpg")';
+        }
+    </script>
+
+    
+</body>
+</html>

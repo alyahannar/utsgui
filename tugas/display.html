@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .display{
+         position: fixed;
+         width:100%;
+         height:100%;
+         display: none;
+         padding-top: 100px;
+         left: 0;
+         top: 0;
+         overflow: auto;
+         background-color: rgb(0,0,0,0.5);
+        }
+        .display2{
+        margin: auto;
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid black;
+        width : 80%;
+        height : 50px;
+        }
+        .close{
+        background-color: #aaaaaa;
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        .close:hover,
+        .close:focus{
+        color:#000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        .display2 span{
+            float: right;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Modal</h1>
+    <button id="tambah" onclick="tambahdata()" >Tambah Data Baru</button>
+
+    <div class="display" id="popup">
+        <div class="display2">
+        Isi Kotak
+        <span class="closebtn">X</span>
+        </div>
+    </div>
+
+    <div class="close"></div>
+
+    <script>
+        var display = document.getElementById('popup');
+        var button = document.getElementById('tambah');
+        var span = document.getElementsByClassName('closebtn')[0];
+
+        button.onclick = function(){
+            display.style.display="block";
+        }
+
+        span.onclick = function(){
+            document.getElementById('popup').style.display="none";
+        }
+
+        window.onclick = function(event){
+            if(event.target==user){
+                display.style.display="none";
+            }
+        }
+        
+    </script>
+</body>
+</html>

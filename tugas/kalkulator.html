@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .kalkulator{
+        width: 500px;
+        height: 325px;
+        background-color:khaki;
+        margin: auto;
+    }
+    .data1{
+        width: 400px;
+        height: 30px;
+        background-color:olivedrab;
+        border-radius: 10px;
+        padding: 5px 0px 0px 0px;
+        margin: auto;
+    }
+    .data2{
+        width: 400px;
+        height: 30px;
+        background-color:olivedrab;
+        border-radius: 10px;
+        padding: 5px 0px 0px 0px;
+        margin: auto;
+    }
+    .back{
+        width: 500px;
+        height: 30px;
+        background-color:darkkhaki;
+        padding: 15px 0px 5px 0px;
+        margin: auto;
+    }
+    .hasil{
+        text-align: center;
+    }
+    input[type=text] {
+        border: none;
+        width : 300px;
+        height: 30px;
+        font-size: 24px;
+        text-align: center;
+        border-bottom: 2px solid black;
+    }
+
+</style>
+</head>
+<body>
+    <div class="kalkulator">
+        <h1 align="center">Kalkulator Javascript</h1>
+        <br>
+        <center><input type="text" id="awal"></center>
+        <br><br>
+        <center><input type="text" id="akhir"></center>
+        <br>
+        <div class="back">
+            <center>
+            <button type = "button" id="btn" onclick="tambah()" value="Tambah">+</button>
+            <button type = "button" id="btn" onclick="kurang()" value="Kurang">-</button>
+            <button type = "button" id="btn" onclick="kali()" value="Kali">X</button>
+            <button type = "button" id="btn" onclick="bagi()" value="Bagi">/</button>
+            </center>
+        </div>
+            <center><h1 id="total"></h1></center>
+    </div>
+  
+    <script>
+        function tambah(){
+            var bil1 = parseInt(document.getElementById("awal").value);
+            var bil2 = parseInt(document.getElementById("akhir").value);
+            var awal =Number(bil1); //convert string ke int atau number
+            var akhir = Number(bil2);
+            var hasil = awal+akhir;
+            
+            document.getElementById("total").innerHTML=hasil;
+        }
+        function kurang(){
+            var bil1 = parseInt(document.getElementById("awal").value);
+            var bil2 = parseInt(document.getElementById("akhir").value);
+            var awal =Number(bil1); //convert string ke int atau number
+            var akhir = Number(bil2);
+            var hasil = awal-akhir;
+            
+            document.getElementById("total").innerHTML=hasil;
+        }
+        function bagi(){
+            var bil1 = parseInt(document.getElementById("awal").value);
+            var bil2 = parseInt(document.getElementById("akhir").value);
+            var awal =Number(bil1); //convert string ke int atau number
+            var akhir = Number(bil2);
+            var hasil = awal/akhir;
+            
+            document.getElementById("total").innerHTML=hasil;
+        }
+        function kali(){
+            var bil1 = parseInt(document.getElementById("awal").value);
+            var bil2 = parseInt(document.getElementById("akhir").value);
+            var awal =Number(bil1); //convert string ke int atau number
+            var akhir = Number(bil2);
+            var hasil = awal*akhir;
+            
+            document.getElementById("total").innerHTML=hasil;
+        }
+    </script>
+    
+</body>
+</html>

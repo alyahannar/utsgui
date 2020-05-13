@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <style>
+        .sidepanel{
+        width: 150px;
+        height: 100%;
+        background-color: rgba(255, 127, 80, 0.76);
+        left: 0px;
+        position: fixed;
+        transition: width 1s;
+        }
+
+        .sidepanelclose{
+        width: 0px;
+        height: 100%;
+        background-color: rgba(255, 127, 80, 0.76);
+        position: fixed;
+        overflow: auto;
+        top: 0px;
+        left: 0px;
+        transition: width 2s;
+        }
+
+        .main{
+        width: 500px;
+        height: 100%;
+        background-color :wheat;
+        margin-left: 150px;
+        }
+
+        .mainclosed{
+        background-color :wheat;
+        margin-left: 0px; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidepanelclose" id="sidepanel">
+        <span style="font-size:30px;cursor:pointer" onclick="closeNav()">X</span>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    
+    <div class="mainclosed" id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+        <h1>Ini Konten Utama</h1>
+    </div>
+
+
+    <script>
+        function closeNav(){
+            document.getElementById("sidepanel").className="sidepanelclose";
+            document.getElementById("main").className="mainclosed";
+        }
+        function openNav(){
+            document.getElementById("sidepanel").className="sidepanel";
+            document.getElementById("main").className="main";
+        }
+    </script>
+    
+</body>
+</html>
